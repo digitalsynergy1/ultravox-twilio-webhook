@@ -55,6 +55,23 @@ app.post('/incoming', async (req, res) => {
         res.send(response.toString());
     }
 });
+app.post('/', async (req, res) => {
+  try {
+    const twiml = new VoiceResponse();
+
+    // Trigger UltraVox Call
+    await createUltravoxCall();
+
+    // Respond with TwiML to speak to caller
+    twiml.say('Connecting you now. Please hold.');
+
+    res.type('text/xml');
+    res.send(twiml.toString());
+  } catch (error) {
+    console.error('Error handling incoming root POST:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
