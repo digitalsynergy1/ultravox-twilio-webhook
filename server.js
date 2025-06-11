@@ -42,6 +42,8 @@ async function createUltravoxCall() {
 app.post('/incoming', async (req, res) => {
     try {
         const ultravoxCall = await createUltravoxCall();
+console.log('UltraVox call response:', ultravoxCall);
+
         const response = new VoiceResponse();
         const connect = response.connect();
         connect.stream({ url: ultravoxCall.joinUrl });
