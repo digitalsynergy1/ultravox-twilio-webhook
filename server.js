@@ -13,7 +13,9 @@ const ULTRAVOX_API_URL = 'https://api.ultravox.ai/api/calls';
 const ULTRAVOX_CALL_CONFIG = {
   model: 'fixie-ai/ultravox',
   voice: 'Tanya-English',
-  firstSpeaker: 'd854cd64-d94e-4d1b-9ea1-4fd0dc739364',
+  firstSpeaker: {
+    agent: 'd854cd64-d94e-4d1b-9ea1-4fd0dc739364'
+  },
   medium: {
     "twilio": {}
   }
