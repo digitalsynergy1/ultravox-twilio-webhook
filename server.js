@@ -11,11 +11,9 @@ const ULTRAVOX_API_KEY = process.env.ULTRAVOX_API_KEY;
 const ULTRAVOX_API_URL = 'https://api.ultravox.ai/api/calls';
 
 const ULTRAVOX_CALL_CONFIG = {
-  model: 'fixie-ai/ultravox',
+  model: 'ultravox/voice',
+  agentId: 'd854cd64-d94e-4d1b-9ea1-4fd0dc739364',
   voice: 'Tanya-English',
-  firstSpeaker: {
-    agent: 'fixie/agent/Demo_Agent_Ava'
-  },
   medium: {
     "twilio": {}
   }
