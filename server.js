@@ -14,7 +14,7 @@ const ULTRAVOX_CALL_CONFIG = {
   model: 'fixie-ai/ultravox',
   voice: 'Tanya-English',
   firstSpeaker: {
-    agent: 'd854cd64-d94e-4d1b-9ea1-4fd0dc739364'
+    agent: 'fixie/agent/Demo_Agent_Ava'
   },
   medium: {
     "twilio": {}
