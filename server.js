@@ -11,12 +11,13 @@ const ULTRAVOX_API_KEY = process.env.ULTRAVOX_API_KEY;
 const ULTRAVOX_API_URL = 'https://api.ultravox.ai/api/calls';
 
 const ULTRAVOX_CALL_CONFIG = {
-  model: 'ultravox/voice',
+  model: 'fixie-ai/ultravox',
   voice: 'Tanya-English',
   medium: {
     "twilio": {}
   }
 };
+
 
 async function createUltravoxCall() {
     return new Promise((resolve, reject) => {
